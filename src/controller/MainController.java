@@ -1,14 +1,19 @@
 package controller;
 
+import controller.analize.*;
 import controller.library.*;
-import controller.menu.MenuController;
+import javafx.embed.swing.SwingNode;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.SplitPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
+import org.jfree.chart.ChartPanel;
+import org.jfree.ui.RefineryUtilities;
 
+import javax.swing.*;
+import java.awt.*;
 import java.io.IOException;
 
 public class MainController extends SwitchScene implements Path {
@@ -19,18 +24,20 @@ public class MainController extends SwitchScene implements Path {
     @FXML
     public AnchorPane anchorPaneLeft;
     @FXML
-    protected SplitPane splitPaneLibrary;
-    public AnchorPane getAnchorPaneRight() {
-        return anchorPaneRight;
-    }
+    public SplitPane splitPaneLibrary;
+    @FXML
+    public Pane boxPane;
+    BoxChart chart;
 
     @FXML
     public void initialize() {
-        loadMenuWindow(PATH_MENU);
+        chart = new BoxChart();
+
+        loadLibraryMenuWindow(PATH_MENU_LIBRARY);
+        loadMeasureWindow(Path.PATH_MEASURE);
     }
 
-    //-------  loading the MAIN MENU window   -----------------------------------
-    public void loadMenuWindow(String fxmlPath) {
+    public void loadCorrelationWindow(String fxmlPath) {
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource(fxmlPath));
         Pane pane = new Pane();
         try {
@@ -38,9 +45,9 @@ public class MainController extends SwitchScene implements Path {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        MenuController menuController = loader.getController();
-        menuController.setMainController(this);
-        setLeftWindow(pane, anchorPaneLeft);
+        CorrelationController correlationController = loader.getController();
+        correlationController.setMainController(this);
+        setLeftWindow(pane, anchorPaneRight);
     }
 
     public void loadLibraryMenuWindow(String fxmlPath) {
@@ -56,7 +63,7 @@ public class MainController extends SwitchScene implements Path {
         setLeftWindow(pane, anchorPaneLeft);
     }
 
-    public void loadShowLibraryWindow(String fxmlPath) {
+    public void loadMeasureWindow(String fxmlPath) {
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource(fxmlPath));
         Pane pane = new Pane();
         try {
@@ -64,12 +71,12 @@ public class MainController extends SwitchScene implements Path {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        ShowLibraryController showLibraryController = loader.getController();
-        showLibraryController.setMainController(this);
+        MeasureController measureController = loader.getController();
+        measureController.setMainController(this);
         setRightWindow(pane, anchorPaneRight);
     }
 
-    public void loadAddLibraryWindow(String fxmlPath) {
+    public void loadHistogramWindow(String fxmlPath) {
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource(fxmlPath));
         Pane pane = new Pane();
         try {
@@ -77,12 +84,12 @@ public class MainController extends SwitchScene implements Path {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        AddLibraryController addLibraryController = loader.getController();
-        addLibraryController.setMainController(this);
+        HistogramController histogramController = loader.getController();
+        histogramController.setMainController(this);
         setRightWindow(pane, anchorPaneRight);
     }
 
-    public void loadDeleteLibraryWindow(String fxmlPath) {
+    public void loadScatterWindow(String fxmlPath) {
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource(fxmlPath));
         Pane pane = new Pane();
         try {
@@ -90,12 +97,14 @@ public class MainController extends SwitchScene implements Path {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        DeleteLibraryController deleteLibraryController = loader.getController();
-        deleteLibraryController.setMainController(this);
+        ScatterController scatterController = loader.getController();
+        scatterController.setMainController(this);
         setRightWindow(pane, anchorPaneRight);
     }
 
-    public void loadRankingLibraryWindow(String fxmlPath) {
+    public void loadBoxWindow(String fxmlPath) {
+        final SwingNode swingNode = new SwingNode();
+
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource(fxmlPath));
         Pane pane = new Pane();
         try {
@@ -103,9 +112,35 @@ public class MainController extends SwitchScene implements Path {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        RankingLibraryController rankingLibraryController = loader.getController();
-        rankingLibraryController.setMainController(this);
+        pane.getChildren().add(swingNode);
+        createSwingContent(swingNode);
+
+        BoxController boxController = loader.getController();
+        boxController.setMainController(this);
         setRightWindow(pane, anchorPaneRight);
+        anchorPaneRight.setBottomAnchor(pane, 0.0);
+        anchorPaneRight.setRightAnchor(pane, -20.0);
     }
 
+    private void createSwingContent(final SwingNode swingNode) {
+        ChartPanel chartPanel = new ChartPanel(chart.createChart());
+        chartPanel.setPreferredSize(new Dimension(633, 550));
+
+        JPanel panel = new JPanel();
+        JLabel label = new JLabel();
+
+        label.setText("WYKRES PUDEŁKOWY");
+        label.setForeground(Color.decode("#daa3a3"));
+        label.setFont(new Font("SansSerif", Font.BOLD, 35));
+
+        panel.setLayout(new BorderLayout());
+        panel.add(label, BorderLayout.CENTER);
+        panel.add(chartPanel, BorderLayout.SOUTH);
+
+        panel.setSize(633, 600);
+        panel.setBackground(new Color(70,0,0));
+//        panel.setVisible(true);
+
+        swingNode.setContent(panel);
+    }
 }

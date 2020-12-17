@@ -4,20 +4,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 
-<StackPane id="mainPane" fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-           minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" stylesheets="@css/style.css"
-           xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
-           fx:controller="controller.MainController">
-    <SplitPane id="splitPaneMenu" fx:id="splitPaneLibrary" dividerPositions="0.3283208020050125"
-               stylesheets="@css/style.css">
+<StackPane id="mainPane" fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+    <SplitPane id="splitPaneMenu" fx:id="splitPaneLibrary" dividerPositions="0.15" stylesheets="@css/style.css">
 
-          <AnchorPane id="anchorPaneLeft" fx:id="anchorPaneLeft" minHeight="0.0" minWidth="0.0"
-                      nodeOrientation="LEFT_TO_RIGHT">
-
-                  <fx:include source="menu/MenuWindow.fxml"/>
-
-          </AnchorPane>
-          <AnchorPane id="anchorPaneRight" fx:id="anchorPaneRight" minHeight="0.0" minWidth="0.0" prefHeight="160.0"
-                      prefWidth="100.0"/>
+          <AnchorPane id="anchorPaneLeft" fx:id="anchorPaneLeft" minHeight="0.0" minWidth="0.0" nodeOrientation="LEFT_TO_RIGHT" />
+          <AnchorPane id="anchorPaneRight" fx:id="anchorPaneRight" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" stylesheets="@css/style.css" />
     </SplitPane>
 </StackPane>

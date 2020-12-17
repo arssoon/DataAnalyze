@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="anchorPaneRight" prefHeight="600.0" prefWidth="675.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.analize.CorrelationController">
+      <Label alignment="CENTER" layoutX="12.0" layoutY="471.0" prefHeight="114.0" prefWidth="644.0" style="-fx-background-color: darkgreen;" text="X1 - AGE                                                  X6 - FBS                                        X11 - SLOPE&#10;X2 - SEX                                                   X7 - RESTECG                               X12 - CA            &#10;X3 - CP                                                     X8 - THALACH                             X13 - THAL     &#10;X4 - TRESTBPS                                         X9 - EXANG                                  X14 - NUM&#10;X5 - CHOL                                               X10 - OLDPEAK                                                        " textFill="#e4d2d2">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   <HBox layoutX="42.0" layoutY="128.0" prefHeight="312.0" prefWidth="615.0">
+      <children>
+         <ListView id="listView" fx:id="listView1" prefHeight="300.0" prefWidth="44.0" />
+         <ListView id="listView" fx:id="listView2" fixedCellSize="-5.0" prefHeight="300.0" prefWidth="44.0" />
+         <ListView id="listView" fx:id="listView3" prefHeight="300.0" prefWidth="44.0" />
+         <ListView id="listView" fx:id="listView4" prefHeight="300.0" prefWidth="44.0" />
+         <ListView id="listView" fx:id="listView5" prefHeight="300.0" prefWidth="44.0" />
+         <ListView id="listView" fx:id="listView6" prefHeight="300.0" prefWidth="44.0" />
+         <ListView id="listView" fx:id="listView7" prefHeight="300.0" prefWidth="44.0" />
+         <ListView id="listView" fx:id="listView8" prefHeight="300.0" prefWidth="44.0" />
+         <ListView id="listView" fx:id="listView9" prefHeight="300.0" prefWidth="44.0" />
+         <ListView id="listView" fx:id="listView10" prefHeight="300.0" prefWidth="44.0" />
+         <ListView id="listView" fx:id="listView11" prefHeight="300.0" prefWidth="44.0" />
+         <ListView id="listView" fx:id="listView12" prefHeight="300.0" prefWidth="44.0" />
+         <ListView id="listView" fx:id="listView13" prefHeight="300.0" prefWidth="44.0" />
+         <ListView id="listView" fx:id="listView14" prefHeight="300.0" prefWidth="44.0" />
+      </children>
+   </HBox>
+   <Label alignment="CENTER" contentDisplay="CENTER" layoutX="187.0" layoutY="45.0" prefHeight="43.0" prefWidth="316.0" text="KORELACJA PEARSON'A" textAlignment="CENTER" textFill="#daa3a3">
+      <font>
+         <Font name="System Bold" size="27.0" />
+      </font>
+   </Label>
+   <ListView id="listViewUp" fx:id="listView15" layoutX="42.0" layoutY="100.0" orientation="HORIZONTAL" prefHeight="26.0" prefWidth="616.0" stylesheets="@../css/style.css" />
+   <ListView id="listViewUp" fx:id="listView16" layoutY="128.0" prefHeight="312.0" prefWidth="39.0" stylesheets="@../css/style.css" />
+   <Separator layoutX="42.0" layoutY="126.0" prefWidth="615.0" />
+   <Separator layoutX="39.0" layoutY="126.0" orientation="VERTICAL" prefHeight="313.0" />
+   <Separator layoutY="149.0" prefWidth="658.0" />
+   <Separator layoutY="172.0" prefWidth="658.0" />
+   <Separator layoutY="195.0" prefWidth="658.0" />
+   <Separator layoutY="218.0" prefWidth="658.0" />
+   <Separator layoutY="241.0" prefWidth="658.0" />
+   <Separator layoutY="262.0" prefWidth="658.0" />
+   <Separator layoutY="282.0" prefWidth="658.0" />
+   <Separator layoutY="304.0" prefWidth="658.0" />
+   <Separator layoutY="326.0" prefWidth="658.0" />
+   <Separator layoutY="348.0" prefWidth="658.0" />
+   <Separator layoutY="370.0" prefWidth="658.0" />
+   <Separator layoutY="392.0" prefWidth="658.0" />
+   <Separator layoutY="414.0" prefWidth="658.0" />
+   <Separator layoutY="438.0" prefWidth="658.0" />
+   <Separator layoutX="85.0" layoutY="100.0" orientation="VERTICAL" prefHeight="338.0" />
+   <Separator layoutX="129.0" layoutY="100.0" orientation="VERTICAL" prefHeight="338.0" />
+   <Separator layoutX="173.0" layoutY="100.0" orientation="VERTICAL" prefHeight="338.0" />
+   <Separator layoutX="217.0" layoutY="100.0" orientation="VERTICAL" prefHeight="338.0" />
+   <Separator layoutX="261.0" layoutY="100.0" orientation="VERTICAL" prefHeight="338.0" />
+   <Separator layoutX="305.0" layoutY="100.0" orientation="VERTICAL" prefHeight="338.0" />
+   <Separator layoutX="349.0" layoutY="100.0" orientation="VERTICAL" prefHeight="338.0" />
+   <Separator layoutX="393.0" layoutY="100.0" orientation="VERTICAL" prefHeight="338.0" />
+   <Separator layoutX="437.0" layoutY="100.0" orientation="VERTICAL" prefHeight="338.0" />
+   <Separator layoutX="481.0" layoutY="100.0" orientation="VERTICAL" prefHeight="338.0" />
+   <Separator layoutX="525.0" layoutY="100.0" orientation="VERTICAL" prefHeight="338.0" />
+   <Separator layoutX="569.0" layoutY="100.0" orientation="VERTICAL" prefHeight="338.0" />
+   <Separator layoutX="613.0" layoutY="100.0" orientation="VERTICAL" prefHeight="338.0" />
+   <Separator layoutX="656.0" layoutY="100.0" orientation="VERTICAL" prefHeight="338.0" />
+</AnchorPane>

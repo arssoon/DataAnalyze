@@ -1,48 +1,29 @@
 package controller;
 
-import controller.menu.MenuController;
-import controller.saveandreadfile.ReadPasswordInFile;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
 public abstract class SwitchScene {
     @FXML
     protected MainController mainController;
-    @FXML
-    protected MenuController menuController;
-    @FXML
-    protected AnchorPane anchorPaneRight;
-    @FXML
-    protected TextField id_user;
-    @FXML
-    protected TextField id_textFieldPassword;
-    @FXML
-    protected PasswordField id_password;
-    @FXML
-    protected CheckBox id_showPassword;
-    @FXML
-    protected Label errorLabel;
-    @FXML
-    protected Label errorLabelSignUp;
+    public static double regressionValue1;
+    public static double regressionValue2;
 
-    //-------  static list variable to keep the name of the movies   -----------------------------------
-    public static ObservableList<String> listOfMovie;
-    protected ReadPasswordInFile readPasswordInFile;
-    protected String userName, password;
-
-    public void setListOfMovie(ObservableList<String> listOfMovie) {
-        SwitchScene.listOfMovie = listOfMovie;
+    public double getRegressionValue1() {
+        return regressionValue1;
     }
 
-    protected final void setAnchorPaneRight() {
-        this.anchorPaneRight = mainController.getAnchorPaneRight();
+    public void setRegressionValue1(double regressionValue1) {
+        this.regressionValue1 = regressionValue1;
     }
 
-    public final void setMenuController(MenuController menuController) {
-        this.menuController = menuController;
+    public double getRegressionValue2() {
+        return regressionValue2;
+    }
+
+    public void setRegressionValue2(double regressionValue2) {
+        this.regressionValue2 = regressionValue2;
     }
 
     //-------  passing to object MainController   -----------------------------------
@@ -60,24 +41,5 @@ public abstract class SwitchScene {
     public final void setRightWindow(Pane pane, AnchorPane anchorPaneRight) {
         anchorPaneRight.getChildren().clear();
         anchorPaneRight.getChildren().add(pane);
-    }
-
-    //-------  LoginPane and SignUpPane setting on the right side of the pane   -----------------------------------
-    public void setRightWindow(Pane pane) {
-        setAnchorPaneRight();
-        anchorPaneRight.getChildren().clear();
-        anchorPaneRight.getChildren().add(pane);
-    }
-
-    //-------  method to show the password in the field  -----------------------------------
-    public void showPassword(TextField textField, CheckBox checkBox, PasswordField passwordField) {
-        textField.managedProperty().bind(checkBox.selectedProperty());
-        textField.visibleProperty().bind(checkBox.selectedProperty());
-
-        passwordField.managedProperty().bind(checkBox.selectedProperty().not());
-        passwordField.visibleProperty().bind(checkBox.selectedProperty().not());
-
-        // Bind the textField and passwordField text values bidirectionally.
-        textField.textProperty().bindBidirectional(passwordField.textProperty());
     }
 }

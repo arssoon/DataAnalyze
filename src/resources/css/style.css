@@ -1,4 +1,73 @@
+#pane 
+{
+	-fx-background-color: grey;
+}
+
+#Label
+{
+	-fx-border-color: yellow;
+	-fx-border-width: 1;
+	-fx-background-color:  #803700;
+	-fx-border-radius: 10px;
+	-fx-background-radius: 10px;
+}
+#LabelUp
+{
+	-fx-border-width: 1;
+	-fx-border-radius: 10px;
+	-fx-background-radius: 10px;
+	-fx-border-color: yellow;
+}
+
+#listView,
+#listViewUp
+{
+	-fx-background-color: transparent;
+	-fx-font-size: 11px;
+	-fx-border-color: black;
+	-fx-border-width: 0.5;
+}
+
+#listViewUp
+{
+	-fx-font-weight: bold;
+	-fx-border-width: 1;
+}
+
+.default-color0.chart-series-line { -fx-stroke: transparent; }
+
+.default-color1.chart-series-line { -fx-stroke: red; }
+
+.default-color0.chart-line-symbol { 
+    -fx-background-color: white, green; 
+}
+.default-color1.chart-line-symbol { 
+    -fx-background-color: transparent, red; 
+}
+
+ 
+ 
+/*-----------------------------    LISTVIEW    ----------------------------------------------------*/
+.list-view .list-cell:odd {
+	-fx-background-color: linear-gradient(#9C2C20 0%, #20120F 100%);
+	-fx-text-fill: white;
+}
+
+.list-view .list-cell {
+	-fx-text-fill: white;
+}
+
+.list-view .list-cell:even {
+    -fx-background-color: linear-gradient(#AC6C10 0%, #20120F 100%);
+}
+
+.list-view .list-cell:selected {
+    -fx-background-color: -fx-accent;
+}
+
 /*-----------------------------    TABLEVIEW    ----------------------------------------------------*/
+
+
 .table-view{
     -fx-background-color:  #20120F;
 }
@@ -47,7 +116,7 @@
 #id_signup:hover
 {
 	-fx-opacity: 1;
-	-fx-font-size: 16px;
+	-fx-font-size: 14px;
     -fx-text-fill: maroon;
 	-fx-font-weight: bold;
 }
@@ -59,7 +128,7 @@
 #id_login:focused, 
 #id_signup:focused {
 	-fx-opacity: 1;
-	-fx-font-size: 16px;
+	-fx-font-size: 14px;
 	-fx-background-color: linear-gradient(#ff5400, #be1d00);
 	-fx-background-radius: 30;
     -fx-background-insets: 0;
@@ -136,6 +205,8 @@
 #paneSignup
 {
 	-fx-background-color:  #22394b;
+	//-fx-border-color: red;
+	//-fx-border-width: 1;
 }
 
 #paneMenu,

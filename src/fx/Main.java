@@ -20,7 +20,7 @@ public class Main extends Application implements Path {
             scene.getStylesheets().add(Path.PATH_STYLE);
             stage.setScene(scene);
 
-            stage.setTitle("Movie-Library");
+            stage.setTitle("Analiza statystyczna");
             stage.show();
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -38,7 +38,7 @@ public class Main extends Application implements Path {
         MainController mainController = loader.getController();
         loader.setController(mainController);
 
-        return new Scene(pane, 800, 500);
+        return new Scene(pane, 800, 600);
     }
 
 }
