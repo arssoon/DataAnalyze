@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="anchorPaneRight" prefHeight="600.0" prefWidth="675.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.analize.HistogramController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="187.0" layoutY="45.0" prefHeight="43.0" prefWidth="316.0" text="HISTOGRAM" textAlignment="CENTER" textFill="#daa3a3">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <StackedBarChart id="item" fx:id="id_chart" alternativeRowFillVisible="false" layoutX="14.0" layoutY="74.0" prefHeight="500.0" prefWidth="656.0">
+         <xAxis>
+            <CategoryAxis fx:id="id_xAxis" side="BOTTOM" tickLabelFill="WHITE" tickLabelRotation="47.7" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="id_yAxis" minorTickCount="2" side="LEFT" tickLabelFill="WHITE" tickLabelGap="7.0" tickLabelRotation="-34.4" tickLength="10.0" upperBound="300.0" />
+         </yAxis>
+      </StackedBarChart>
+   </children>
+</AnchorPane>

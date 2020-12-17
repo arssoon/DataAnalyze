@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="anchorPaneRight" prefHeight="600.0" prefWidth="675.0" stylesheets="@../css/style.css"
+            xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.analize.ScatterController">
+   <children>
+      <LineChart id="scatter" fx:id="id_chartLine" layoutX="14.0" layoutY="74.0" prefHeight="515.0" prefWidth="656.0" titleSide="BOTTOM">
+        <xAxis>
+          <CategoryAxis prefHeight="46.0" prefWidth="597.0" side="BOTTOM" tickLabelFill="WHITE" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis minorTickLength="1.0" side="LEFT" tickLabelFill="WHITE" tickLabelGap="5.0" />
+        </yAxis>
+      </LineChart>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-65.0" layoutY="288.0" prefHeight="11.0" prefWidth="171.0" style="-fx-rotate: -90;" text="WIEK" textAlignment="CENTER" textFill="#dacbcb">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="189.0" layoutY="522.0" prefHeight="25.0" prefWidth="346.0" text="STAN CHOROBY SERCA" textAlignment="CENTER" textFill="#dacbcb">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="187.0" layoutY="45.0" prefHeight="43.0" prefWidth="316.0" text="WYKRES ROZRZUTU" textAlignment="CENTER" textFill="#daa3a3">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

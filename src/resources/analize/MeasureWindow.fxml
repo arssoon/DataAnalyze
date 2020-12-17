@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane id="anchorPaneRight" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="675.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.analize.MeasureController">
+      <Label id="Label" fx:id="id_measure" alignment="CENTER" layoutX="4.0" layoutY="163.0" prefHeight="430.0" prefWidth="125.0" textAlignment="CENTER" textFill="WHITE">
+      <font>
+         <Font size="10.0" />
+      </font>
+      </Label>
+   <Label id="LabelUp" alignment="CENTER" layoutX="4.0" layoutY="118.0" prefHeight="45.0" prefWidth="125.0" style="-fx-background-color: maroon;" text="MIN / MAX" textAlignment="CENTER" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <Label id="Label" fx:id="id_measure2" alignment="CENTER" layoutX="134.0" layoutY="55.0" prefHeight="538.0" prefWidth="130.0" textAlignment="CENTER" textFill="WHITE">
+      <font>
+         <Font size="11.0" />
+      </font>
+   </Label>
+   <Label id="LabelUp" alignment="CENTER" layoutX="134.0" layoutY="10.0" prefHeight="45.0" prefWidth="130.0" style="-fx-background-color: maroon;" text="Odchylenie/ &#10;średnia" textAlignment="CENTER" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <Label id="Label" fx:id="id_medianaLabel" alignment="CENTER" layoutX="269.0" layoutY="55.0" prefHeight="245.0" prefWidth="125.0" textAlignment="CENTER" textFill="WHITE">
+      <font>
+         <Font size="11.0" />
+      </font>
+   </Label>
+   <Label id="LabelUp" alignment="CENTER" layoutX="269.0" layoutY="10.0" prefHeight="45.0" prefWidth="125.0" style="-fx-background-color: maroon;" text="Mediana" textAlignment="CENTER" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <Label id="Label" fx:id="id_iqrLabel" alignment="CENTER" layoutX="269.0" layoutY="354.0" prefHeight="239.0" prefWidth="125.0" textAlignment="CENTER" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="11.0" />
+      </font>
+   </Label>
+   <Label id="LabelUp" alignment="CENTER" contentDisplay="CENTER" layoutX="269.0" layoutY="309.0" prefHeight="45.0" prefWidth="125.0" style="-fx-background-color: maroon;" text="Rozstęp &#10;międzykwartylowy" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+      <font>
+         <Font name="System Bold" size="13.0" />
+      </font>
+   </Label>
+   <Label id="Label" fx:id="id_quartileLabel" alignment="CENTER" layoutX="399.0" layoutY="55.0" prefHeight="538.0" prefWidth="140.0" textAlignment="CENTER" textFill="WHITE">
+      <font>
+         <Font size="10.0" />
+      </font>
+   </Label>
+   <Label id="LabelUp" alignment="CENTER" layoutX="399.0" layoutY="10.0" prefHeight="45.0" prefWidth="140.0" style="-fx-background-color: maroon;" text="Kwartyle rzędu&#10;0.1 i 0.9" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <Label id="Label" fx:id="id_pointsLabel" alignment="CENTER" layoutX="544.0" layoutY="55.0" prefHeight="538.0" prefWidth="125.0" textAlignment="CENTER" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="10.0" />
+      </font>
+   </Label>
+   <Label id="LabelUp" alignment="CENTER" layoutX="544.0" layoutY="10.0" prefHeight="45.0" prefWidth="125.0" style="-fx-background-color: maroon;" text="Punkty oddalone" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <Label id="Label" fx:id="id_regressionLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="55.0" prefHeight="54.0" prefWidth="125.0" textAlignment="CENTER" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </Label>
+   <Label id="LabelUp" alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="10.0" prefHeight="45.0" prefWidth="125.0" style="-fx-background-color: maroon;" text="Regresja&#10;age - num" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+</Pane>
